@@ -1,0 +1,98 @@
+To assign a different texture to each direction (north, south, east, and west) in your raycasting engine, you need to make sure you're using the correct texture based on the wall's direction. This is generally determined by checking if the hit was on a vertical or horizontal wall and which side of the wall was hit.
+
+Here's how you can approach this:
+
+1. **Load the textures**: Load the different textures for each direction (north, south, east, and west).
+2. **Determine the wall hit direction**: Based on the raycast results, you need to determine which direction (north, south, east, or west) the wall is facing.
+3. **Draw the correct texture**: Use the appropriate texture when drawing the wall based on the direction of the wall hit.
+
+### Step-by-Step Implementation:
+
+#### 1. Load the Textures
+
+You'll need to load the four textures (for north, south, east, and west walls) at the start. You're already loading textures in the `draw_walls` function, so just load the rest.
+
+In the `draw_walls` function, load all four textures:
+
+```c
+mlx_texture_t *north_texture = mlx_load_png("north.png");
+mlx_texture_t *south_texture = mlx_load_png("south.png");
+mlx_texture_t *east_texture  = mlx_load_png("east.png");
+mlx_texture_t *west_texture  = mlx_load_png("west.png");
+```
+
+#### 2. Determine the Wall Hit Direction
+
+When you cast a ray, check if the ray hit a vertical or horizontal wall, and which side it hit.
+
+- If the ray hits a **vertical wall**:
+  - If the hit is on the right side, use the **west** texture.
+  - If the hit is on the left side, use the **east** texture.
+  
+- If the ray hits a **horizontal wall**:
+  - If the hit is on the top, use the **north** texture.
+  - If the hit is on the bottom, use the **south** texture.
+
+In your `cast_ray` function, you're already setting `ray->is_vertical_hit`, which determines if the hit was vertical. You can now determine the texture based on the direction of the wall.
+
+#### 3. Draw the Correct Texture
+
+In the `draw_walls` function, you need to select the correct texture based on the wall's direction:
+
+Modify the `draw_walls` function as follows:
+
+```c
+void draw_walls(t_mlx *mlx)
+{
+    int             i;
+    double          wall_strip_height;
+    double          distance_projection_plane;
+    double          perp_distance;
+    t_ray           *ray;
+    mlx_texture_t   *texture;
+
+    // Distance from player to projection plane
+    distance_projection_plane = (mlx->data->screen_width / 2) / tan(mlx->data->fov / 2);
+
+    i = 0;
+    while (i < mlx->data->num_rays)
+    {
+        ray = mlx->data->rays + i;
+        // Calculate perpendicular distance to avoid fish-eye distortion
+        perp_distance = ray->distance * cos(ray->angle - mlx->player.angle);
+        // Calculate the height of the wall strip
+        wall_strip_height = (mlx->data->mini_map_tile_size / perp_distance) * distance_projection_plane;
+
+        // Select the appropriate texture based on the wall direction
+        if (ray->is_vertical_hit)
+        {
+            if (ray->wall_hit_x > mlx->player.x)  // Hit on the east side
+                texture = mlx_load_png("east.png");
+            else                                  // Hit on the west side
+                texture = mlx_load_png("west.png");
+        }
+        else
+        {
+            if (ray->wall_hit_y > mlx->player.y)  // Hit on the south side
+                texture = mlx_load_png("south.png");
+            else                                  // Hit on the north side
+                texture = mlx_load_png("north.png");
+        }
+
+        // Draw the wall using the selected texture
+        draw_wall(mlx, i, (mlx->data->screen_height / 2) - (wall_strip_height / 2), wall_strip_height, texture);
+
+        i++;
+    }
+}
+```
+
+This code will:
+
+- Determine if the hit was vertical or horizontal.
+- Based on the hit position, it will select the appropriate texture (`north`, `south`, `east`, or `west`).
+- Then, it will use `draw_wall` to render that texture on the screen for the corresponding wall strip.
+
+### Notes:
+- Ensure the PNG files (`north.png`, `south.png`, `east.png`, and `west.png`) are correctly placed and accessible.
+- You can optimize the texture loading by loading the textures once during initialization and passing them around, instead of loading them each time in the `draw_walls` function.

@@ -1,0 +1,37 @@
+% cub3D
+	!! plan
+		! 1. Error Handling and Utility Functions
+			x void put_err(char *str) { /* Outputs error to stderr */ }
+			x double max(double a, double b) { /* Returns the maximum of two values */ }
+		! 2. Memory Management for Rays
+			x t_ray *create_rays(t_data *data) { /* Allocates memory for rays */ }
+		! 3. Data Initialization
+			x void init_data(t_data *data, char **map) { /* Initializes all essential game data */ }
+			x void init_player(t_player *player, t_data *data) { /* Sets up the player attributes */ }
+		! 4. Player Movement & Controls
+			x void update_player(t_mlx *mlx) { /* Updates player movement based on keyboard input */ }
+		! 5. Raycasting Logic
+			x void find_horz_intersection(t_ray *ray, double ray_angle, t_mlx *mlx) { /* Finds horizontal wall hit */ }
+			x void find_vert_intersection(t_ray *ray, double ray_angle, t_mlx *mlx) { /* Finds vertical wall hit */ }
+		! 6. Rendering
+			Draw Map and Player
+			x void draw_map(t_mlx *mlx) { /* Draws the 2D top-down map */ }
+			x void draw_player(t_mlx *mlx) { /* Draws the player as a circle on the minimap */ }
+			Ray Rendering
+			x void draw_rays(t_mlx *mlx) { /* Draws the rays on the minimap */ }
+			3D Walls Rendering
+			x void draw_walls(t_mlx *mlx) { /* Draws the 3D walls */ }
+		! 7. Ceiling and Floor
+			x void draw_ceiling_floor(t_mlx *mlx) { /* Draws the ceiling and floor */ }
+		! 8. Main Loop and Game Logic
+			x void game_loop(void *param) { /* Core game loop function */ }
+		! 9. Main Function
+			x int main(void) { /* Entry point of the program */ }
+% Summary :
+	x Player Movement
+	x Raycasting
+	x Rendering
+
+
+
+
