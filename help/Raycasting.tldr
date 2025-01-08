@@ -1,1 +1,3679 @@
-
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 5,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 8,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"x": 370.97332763671875,
+			"y": 64.21817932978867,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:2-VfYLp2PLUI00zmiW_yB",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "l",
+				"w": 299.8736877441406,
+				"text": "Raycasting algo",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8762174137243047
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 131.06596750743086,
+			"y": 172.14846801757807,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:50xQzNhjR_l5WXdiOXwl3",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "m",
+				"w": 210.78515625,
+				"text": "1 . Casting Rays :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a26JX",
+			"typeName": "shape"
+		},
+		{
+			"x": 113.65404300854267,
+			"y": 929.845812832195,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Fmmz6yBCFGPjB_nccfiOX",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "m",
+				"w": 351.5729064941406,
+				"text": "2 . Intersection with walls :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a30Ud",
+			"typeName": "shape"
+		},
+		{
+			"x": 116.32399321777814,
+			"y": 2091.2972751165967,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:kD2uREDVfRbylHuETsYoI",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "m",
+				"w": 309.1119689941406,
+				"text": "3 . Calculating Distance :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a45DE",
+			"typeName": "shape"
+		},
+		{
+			"x": 82.05079650878906,
+			"y": 3286.269201358299,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:idlKDCteGfq1XvyDfM2bG",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "m",
+				"w": 381.4752502441406,
+				"text": "4 . Correcting Fish-eye Effect :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.74000560580909
+			},
+			"parentId": "page:page",
+			"index": "a58OT",
+			"typeName": "shape"
+		},
+		{
+			"x": 130.08696277083914,
+			"y": 218.70584806907124,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:0jsaQZVJ9dgsxLH0wQoLc",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 578.44140625,
+				"text": "the player field of view (FOV) divided into individual rays,\nand for each ray, we check if hits a wall. The position and \nangle of each ray are used to calculate the distance to the\nwall and how tall the corresponding wall silce should appear\non the screen.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a64at",
+			"typeName": "shape"
+		},
+		{
+			"x": 110.92231373496571,
+			"y": 974.8504857708671,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:uoIfwWjmFiA7Vr5QUSJX2",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 567.4973754882812,
+				"text": "For each ray, we move step by step along its path, checking \nfor intersections with walls in the game map. The map is a\ngrid where each cell can either be empty or contain a wall.\nThe ray is checked for intersection with grid lines (both \nhorizontal and vertical).",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a7C5T",
+			"typeName": "shape"
+		},
+		{
+			"x": 116.52924114569504,
+			"y": 2123.338156840394,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:IeJKCJP3yuAYBkQnEJ-JF",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 562.6731567382812,
+				"text": "The distance fron the player to the wall is calculated using\nthe PYTHAGOREAN THEOREM. This distance is used to scale \nthe height of the wall slice to create the illusion of depth:\nthe farther the wall, the shorter the wall slice.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8084582404112093
+			},
+			"parentId": "page:page",
+			"index": "a846x",
+			"typeName": "shape"
+		},
+		{
+			"x": 83.3515763211609,
+			"y": 3316.057317639013,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Y_YIxOOtl_GNav0vlnv3S",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 630.4270629882812,
+				"text": "Since the rays are cast at different angles relative to the player’s\nviewing direction, rays cast at the edges of the FOV would cover a\nlonger distance to a wall than rays cast straight ahead, causing \ndistortion. To fix this, a correction factor is applied to the distance \nbased on the angle of the ray relative to the player's direction.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.74000560580909
+			},
+			"parentId": "page:page",
+			"index": "a9AAy",
+			"typeName": "shape"
+		},
+		{
+			"x": 142.255859375,
+			"y": 323.0203051063847,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ZT844t59ZLUpniNPjdwid",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 395.27734375,
+				"text": "1 . 1  Calculate Angele Between Each Ray :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aA4B9",
+			"typeName": "shape"
+		},
+		{
+			"x": 143.82814025878906,
+			"y": 484.898555228455,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JhjufLsYV1iDOvQIYGc8i",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 323.87109375,
+				"text": "1 . 2  Determine Each Ray's Angle :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aB4FV",
+			"typeName": "shape"
+		},
+		{
+			"x": 128.27257747434692,
+			"y": 844.4852512718876,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-GwcwUAWj7_U_o9QskPoS",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 486.5338439941406,
+				"text": "1 . 3  Casting Rays Based on the Calculated Angles :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aC4PD",
+			"typeName": "shape"
+		},
+		{
+			"x": 170.58265686035156,
+			"y": 385.7762101440795,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:aHEw2myooXh-XhY8IjtcA",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "aD3bp",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 18.58071561150109,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:a3gvkPreGY9cWqkiSmGwL",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 141.44921875,
+				"text": "angle_step",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7625920103978913
+			},
+			"parentId": "shape:aHEw2myooXh-XhY8IjtcA",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 142.41752553853314,
+			"y": 37.41465887391587,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Y4q_9n35rfW2AMEgUot2C",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 188.17123413085938,
+				"text": "number of rays",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7563768594030373
+			},
+			"parentId": "shape:aHEw2myooXh-XhY8IjtcA",
+			"index": "a299i",
+			"typeName": "shape"
+		},
+		{
+			"x": 110.80670068701994,
+			"y": 20.58152910466339,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:8IIKx5fZCnMX0VRNT7gbD",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 16.80338478088379,
+				"text": "=",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 0.7625920103978913
+			},
+			"parentId": "shape:aHEw2myooXh-XhY8IjtcA",
+			"index": "a39SO",
+			"typeName": "shape"
+		},
+		{
+			"x": 135.46684426163222,
+			"y": 33.7407285054627,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:r0ssEOLvogc3uPyVobi-y",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "straight",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 142.67,
+								"y": 0,
+								"z": 1
+							}
+						]
+					}
+				],
+				"color": "blue",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "shape:aHEw2myooXh-XhY8IjtcA",
+			"index": "a4AqG",
+			"typeName": "shape"
+		},
+		{
+			"x": 184.6555183698165,
+			"y": 0,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:zm6g9j2agE10ivxGU30SI",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 46.91796875,
+				"text": "FOV",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7625920103978913
+			},
+			"parentId": "shape:aHEw2myooXh-XhY8IjtcA",
+			"index": "a543m",
+			"typeName": "shape"
+		},
+		{
+			"x": 144.62564086914062,
+			"y": 362.73706513190547,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rrVUxUn5Q1ELbVtZB3ng_",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 577.4322509765625,
+				"text": "To find the angle between each ray, you can use the formula:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6595638777462437
+			},
+			"parentId": "page:page",
+			"index": "aE5E4",
+			"typeName": "shape"
+		},
+		{
+			"x": 142.80599975585938,
+			"y": 520.8001621902077,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:tzq2ofhM1CNtv_A9_qJJC",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 431.8868767447027,
+				"text": "Next, calculate the angle of each ray relative to the player's current direction.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5837356812700965
+			},
+			"parentId": "page:page",
+			"index": "aF74A",
+			"typeName": "shape"
+		},
+		{
+			"x": 111.16702270507812,
+			"y": 552.5761945349175,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4bQuz01JhzyBepclDmjVq",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "aG7f5",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 321.9645000716645,
+			"y": 36.729340702251534,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ss2z5nTcRMlCWYpKrW2rg",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 13.466068267308712,
+				"text": "2",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6188733534502245
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 299.8679506707989,
+			"y": 31.6032239002775,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:I7I0zdGiq2E_MP4t7n3_H",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "straight",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 47,
+								"y": 0,
+								"z": 1
+							}
+						]
+					}
+				],
+				"color": "blue",
+				"fill": "none",
+				"dash": "draw",
+				"size": "m",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a29qd",
+			"typeName": "shape"
+		},
+		{
+			"x": 313.10191234787305,
+			"y": 5.676937515837835,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:g_5TvKEsrb4k6Vzz6hhGP",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "m",
+				"w": 46.91796875,
+				"text": "FOV",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6239586377110631
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a30EK",
+			"typeName": "shape"
+		},
+		{
+			"x": 49.46124267578125,
+			"y": 21.855587560815707,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:df2UnYT1ODl4FbKmKwvjG",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 97.10676574707031,
+				"text": "ray_angle",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a42oq",
+			"typeName": "shape"
+		},
+		{
+			"x": 144.846883943899,
+			"y": 23.384408406474904,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:D9oXd_m7RZdJfP_f34aKb",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "=",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a5575",
+			"typeName": "shape"
+		},
+		{
+			"x": 130.9304368147927,
+			"y": 33.2923920012546,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:DtRshX1nuFQbxpiWBU973",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "i",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5686017180084776
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a69gO",
+			"typeName": "shape"
+		},
+		{
+			"x": 166.05051817049548,
+			"y": 21.128469409908462,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:pCSuinm7_BG8DPo3smW5A",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 126.73567199707031,
+				"text": "player_angle",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a71jU",
+			"typeName": "shape"
+		},
+		{
+			"x": 276.8361323472473,
+			"y": 21.876886729178523,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:DV1ThdlT0wXNcDDSiI__q",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "-",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a80cj",
+			"typeName": "shape"
+		},
+		{
+			"x": 355.9241893300546,
+			"y": 21.679800755101837,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:EcAZwyyNuW8rsFyno1rZW",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "+",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "a9AhA",
+			"typeName": "shape"
+		},
+		{
+			"x": 373.2765443890815,
+			"y": 20.12700898139076,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:HNkOHP2G5nw7oRz-DML0_",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 148.38931274414062,
+				"text": "(i x angle_step)",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.818207677504391
+			},
+			"parentId": "shape:4bQuz01JhzyBepclDmjVq",
+			"index": "aA6IC",
+			"typeName": "shape"
+		},
+		{
+			"x": 148.8671875,
+			"y": 632.5813614161905,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JoKqHVn2qqX5sSedExx8C",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 505.90234375,
+				"text": "+ The first ray will be start at player_angle - FOV / 2",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8589245073777517
+			},
+			"parentId": "page:page",
+			"index": "aH9Wt",
+			"typeName": "shape"
+		},
+		{
+			"x": 150.5727429480453,
+			"y": 667.0110284074358,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:hRWweaPGeX1M-_nWEcMQn",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 456.61846923828125,
+				"text": "+ The last will be end at player_angle + FOV / 2",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8589245073777517
+			},
+			"parentId": "page:page",
+			"index": "aI4bl",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 955.8524815272114,
+			"y": 2393.669045084997,
+			"lastActivityTimestamp": 1730458710571,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:color": "green",
+				"tldraw:size": "s",
+				"tldraw:geo": "rectangle",
+				"tldraw:dash": "solid"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1062.5,
+				"h": 1085.833251953125
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 2.4000000953674316,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": false,
+			"openMenus": [],
+			"isChangingStyle": true,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:15FhOWG92wa2x1NKMev2W"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 89.40142472278865,
+			"y": -2386.110451334997,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 146.2957575270898,
+			"y": 723.9012093180191,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:sF1MG5NVakjyKO8NdOowj",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 762.5997567519802,
+				"text": "Suppose the player_angle is 45 degrees, FOV is 60 degrees, and angle_step is 0.5 degrees:\n\nRay 0 would have ray_angle = 45 - 30 + (0 * 0.5) = 15 degrees.\nRay 1 would have ray_angle = 15 + 0.5 = 15.5 degrees.\nThis increment continues until all rays cover the FOV.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6712102818181743
+			},
+			"parentId": "page:page",
+			"index": "aJ7lN",
+			"typeName": "shape"
+		},
+		{
+			"x": 131.2919434935392,
+			"y": 691.6677132873345,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:YXB8SYIxPwXKvjUPFUQlv",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 112.24348449707031,
+				"text": "Example:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7682880573862823
+			},
+			"parentId": "page:page",
+			"index": "aK9Bv",
+			"typeName": "shape"
+		},
+		{
+			"x": 139.87469067032544,
+			"y": 878.9304435167138,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:civVYi6_LfZs1G1O6J6OU",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "m",
+				"w": 918.91015625,
+				"text": "double ray_dir_x = cos(ray_angle * (M_PI / 180.0));  // Convert to radians\ndouble ray_dir_y = sin(ray_angle * (M_PI / 180.0));",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6147142717468469
+			},
+			"parentId": "page:page",
+			"index": "aL1fs",
+			"typeName": "shape"
+		},
+		{
+			"x": 112.04210872434692,
+			"y": 1079.6024692894657,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:yEU3yub7l4NGNTrM_62sF",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 453.08984375,
+				"text": "2 . 1 Horizontal and Vertical Grid Intersections :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aCkgF",
+			"typeName": "shape"
+		},
+		{
+			"x": 121.42761027147787,
+			"y": 1119.9566973902067,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:lV0G637VpHb8fl2CCNIoQ",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 622.2044067382812,
+				"text": "+ Horizontal intersections: Where the ray crosses a row boundary.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8735431247923343
+			},
+			"parentId": "page:page",
+			"index": "aM5d5",
+			"typeName": "shape"
+		},
+		{
+			"x": 118.37076916153637,
+			"y": 1148.051153745146,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:aiJzCGbVU22snhT3h0gnI",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 626.3970947265625,
+				"text": "+ Vertical intersections: Where the ray crosses a column boundary.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8735431247923343
+			},
+			"parentId": "page:page",
+			"index": "aNAwa",
+			"typeName": "shape"
+		},
+		{
+			"x": 105.34288997434692,
+			"y": 1179.9573276879032,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:AuVHeO_2Z-YPfAz3N0-wy",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 389.4049377441406,
+				"text": "2 . 2 Calculating step sizes for Each Ray :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aCu92349",
+			"typeName": "shape"
+		},
+		{
+			"x": 105.97497143204419,
+			"y": 1220.0827938127322,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:MQmVwum2w6K9LWVRVR0hu",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 560.0299072265625,
+				"text": "for each ray, we determine its dir based on the ray_angle :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aO15u",
+			"typeName": "shape"
+		},
+		{
+			"x": 138.9892841761848,
+			"y": 1258.1947322892947,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:MwdtKF78ARjrL6-IjlS4R",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 173.83853149414062,
+				"text": "the ray can move :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aP8X1",
+			"typeName": "shape"
+		},
+		{
+			"x": 169.34740795548169,
+			"y": 1290.1230526853103,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:E8-YZN6n_RIfxeNZ_sBDf",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 207.62759399414062,
+				"text": "+ Rightward (0 to 90)",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7971096227684965
+			},
+			"parentId": "page:page",
+			"index": "aQ7ji",
+			"typeName": "shape"
+		},
+		{
+			"x": 170.16773571427075,
+			"y": 1311.2688656735916,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:1IE8KT4IT2vn-Ni_O7SN7",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 169.18651743261339,
+				"text": "+ leftward (90 to 180)",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7971096227684965
+			},
+			"parentId": "page:page",
+			"index": "aR8uH",
+			"typeName": "shape"
+		},
+		{
+			"x": 167.88256420548169,
+			"y": 1331.7017880368728,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WS54HQ4IvlvHIhu147xGH",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 191.56889490825552,
+				"text": "+ Downward (180 to 270)",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7971096227684965
+			},
+			"parentId": "page:page",
+			"index": "aS5jP",
+			"typeName": "shape"
+		},
+		{
+			"x": 168.72893871720044,
+			"y": 1350.8847714353103,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:5gsJTpLhHY5BF1DJiWUdX",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 173.1772469536107,
+				"text": "+ Upward (270 to 360)",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7971096227684965
+			},
+			"parentId": "page:page",
+			"index": "aT0QM",
+			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-29uk1yyn1WIVL__zUlvC",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 112.24348449707031,
+				"text": "Example:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7682880573862823
+			},
+			"parentId": "shape:qf38u1Mdqn28Mn0Q6DD1V",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 33.3809344326456,
+			"y": 27.210946906736808,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:_HMX1R84hPhhQsTbTo7ZN",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 535.9478759765625,
+				"text": "// Determine if the ray is moving right or left, up or down\ndouble ray_dir_x = cos(ray_angle);\ndouble ray_dir_y = sin(ray_angle);\n\nint step_x = (ray_dir_x >= 0) ? 1 : -1;\nint step_y = (ray_dir_y >= 0) ? 1 : -1;",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8022875604859144
+			},
+			"parentId": "shape:qf38u1Mdqn28Mn0Q6DD1V",
+			"index": "a204q",
+			"typeName": "shape"
+		},
+		{
+			"x": 106.284251827552,
+			"y": 1374.7877185116854,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:bCUe6mc9RUq34w0Eko4pG",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 808.32421875,
+				"text": "from the angle, we calculate the step size and initial position of each ray intersection",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.679989948340268
+			},
+			"parentId": "page:page",
+			"index": "aV9AR",
+			"typeName": "shape"
+		},
+		{
+			"x": 103.64545911853921,
+			"y": 1397.0062447814753,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:qf38u1Mdqn28Mn0Q6DD1V",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "aU6kq",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 116.87285823606567,
+			"y": 1553.0106724144657,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:VsH8Y6n39bAidX3wgpdM-",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 452.6796875,
+				"text": "2 . 3 Calculating the Initial Intersection Points :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aCysQhMR",
+			"typeName": "shape"
+		},
+		{
+			"x": 146.14098705704419,
+			"y": 1604.2020570359093,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GDYsyOiyZZV1aks9-94eK",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 353.65625,
+				"text": "+ Horizontal Intersection Calculation:",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 0.7988829633377883
+			},
+			"parentId": "page:page",
+			"index": "aY6G7",
+			"typeName": "shape"
+		},
+		{
+			"x": 159.22367443497387,
+			"y": 1626.076850270626,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:45IS52OKEksdL56iwduH-",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 956.25,
+				"text": "double delta_dist_y = fabs(1 / ray_dir_y);\ndouble first_horizontal_y = floor(player_y / grid_size) * grid_size;\nfirst_horizontal_y += (ray_dir_y > 0) ? grid_size : 0;\ndouble first_horizontal_x = player_x + (first_horizontal_y - player_y) / tan(ray_angle);",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.6502519116370507
+			},
+			"parentId": "page:page",
+			"index": "aZ76W",
+			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:mjA3JQh9ksbLATwZgoVmO",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 262.8335188970087,
+				"text": "+ Vertical Intersection Calculation:",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 0.7988829633377883
+			},
+			"parentId": "shape:94S8w02KFb4hxRdUZODPa",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 14.220783191180146,
+			"y": 20.970970145117008,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:SrLPuEo4lz4n7yxSOyN0U",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 956.25,
+				"text": "double delta_dist_x = fabs(1 / ray_dir_x);\ndouble first_vertical_x = floor(player_x / grid_size) * grid_size;\nfirst_vertical_x += (ray_dir_x > 0) ? grid_size : 0;\ndouble first_vertical_y = player_y + (first_vertical_x - player_x) * tan(ray_angle);",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.5605766186683007
+			},
+			"parentId": "shape:94S8w02KFb4hxRdUZODPa",
+			"index": "a24tL",
+			"typeName": "shape"
+		},
+		{
+			"x": 143.14090699086404,
+			"y": 1699.7229005417687,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:94S8w02KFb4hxRdUZODPa",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "aa8YU",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 111.93796748899535,
+			"y": 1798.2743442894657,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:j08yRla8YrJnCg7aONtex",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 425.8046875,
+				"text": "2 . 4 incremental Ray Movement Along Grid :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aD1F7vCe",
+			"typeName": "shape"
+		},
+		{
+			"x": 33.3809344326456,
+			"y": 27.210946906736808,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:bd1nWEasoaHc92rBWNgZP",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 535.9478759765625,
+				"text": "// Determine if the ray is moving right or left, up or down\ndouble ray_dir_x = cos(ray_angle);\ndouble ray_dir_y = sin(ray_angle);\n\nint step_x = (ray_dir_x >= 0) ? 1 : -1;\nint step_y = (ray_dir_y >= 0) ? 1 : -1;",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8022875604859144
+			},
+			"parentId": "shape:xftAUxrsJQQASdxhFNim9",
+			"index": "a38Ed",
+			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:o3OXpwYL3DqV_XX7iNfXE",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 112.24348449707031,
+				"text": "Example:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7682880573862823
+			},
+			"parentId": "shape:xftAUxrsJQQASdxhFNim9",
+			"index": "a1ftL",
+			"typeName": "shape"
+		},
+		{
+			"x": 103.64545911853921,
+			"y": 1397.0062447814753,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:xftAUxrsJQQASdxhFNim9",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "aUf9x",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 455.72105755264965,
+			"y": 1708.8475793150255,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:mC-B4a8Qic5DUV4W_7iFN",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 111.24348449707031,
+				"text": "Example:",
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "ab4bH",
+			"typeName": "shape"
+		},
+		{
+			"x": 113.71325268204419,
+			"y": 1829.3169448331796,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Vu-VW1RXbEMHvOA97TJYR",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 135.84375,
+				"text": "Example loop :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "ac4f0",
+			"typeName": "shape"
+		},
+		{
+			"x": 144.4385029261848,
+			"y": 1856.7678585240062,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:P7DPtGnRtzBscZ6am-YTw",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 798.9192504882812,
+				"text": "while (!wall_hit) {\n    if (first_horizontal_dist < first_vertical_dist) {\n        first_horizontal_y += step_y * grid_size;\n        first_horizontal_x += step_x * grid_size;\n        // Check if the current grid cell has a wall\n        wall_hit = is_wall(first_horizontal_x, first_horizontal_y);\n    } else {\n        first_vertical_x += step_x * grid_size;\n        first_vertical_y += step_y * grid_size;\n        wall_hit = is_wall(first_vertical_x, first_vertical_y);\n    }\n}",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6320137260606716
+			},
+			"parentId": "page:page",
+			"index": "ad02b",
+			"typeName": "shape"
+		},
+		{
+			"x": 117.66097771066802,
+			"y": 2045.4877641355233,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:hoI3J5zqT5ZOdQsfr_K40",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 679.8800464761985,
+				"text": "The loop checks each intersection to see if it’s a wall and stops at the \nfirst detected wall, ensuring that the nearest intersection is recorded.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7067248200765884
+			},
+			"parentId": "page:page",
+			"index": "ae6EG",
+			"typeName": "shape"
+		},
+		{
+			"x": 99.84162349485473,
+			"y": 2214.1499851586063,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:NqxZZZimjbyvxEh29emIi",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 588.9036254882812,
+				"text": "3 . 1 Calculating the distance using the Pythagorean Theorem :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aD2QTTqV",
+			"typeName": "shape"
+		},
+		{
+			"x": 82.86352209608125,
+			"y": 32.23659508320907,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:L7Q_TAjcKvfZA165FSoix",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 98.8125,
+				"text": "distance =",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7987034919045006
+			},
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 167.021174548908,
+			"y": 38.69664494176595,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:EI0jEaMF-MU48ZykKqYbf",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "free",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 2.04,
+								"y": 0.48,
+								"z": 0.5
+							},
+							{
+								"x": 6.87,
+								"y": 3.98,
+								"z": 0.5
+							},
+							{
+								"x": 9.61,
+								"y": 6.8,
+								"z": 0.5
+							},
+							{
+								"x": 12.28,
+								"y": 9.34,
+								"z": 0.5
+							},
+							{
+								"x": 15.06,
+								"y": 12.17,
+								"z": 0.5
+							},
+							{
+								"x": 17.66,
+								"y": 14.45,
+								"z": 0.5
+							},
+							{
+								"x": 18.32,
+								"y": 15.36,
+								"z": 0.5
+							},
+							{
+								"x": 18.71,
+								"y": 15.61,
+								"z": 0.5
+							},
+							{
+								"x": 18.89,
+								"y": 15.85,
+								"z": 0.5
+							},
+							{
+								"x": 18.89,
+								"y": 15.93,
+								"z": 0.5
+							},
+							{
+								"x": 19.13,
+								"y": 16.25,
+								"z": 0.5
+							},
+							{
+								"x": 19.33,
+								"y": 16.41,
+								"z": 0.5
+							},
+							{
+								"x": 19.56,
+								"y": 16.72,
+								"z": 0.5
+							},
+							{
+								"x": 20.47,
+								"y": 16.52,
+								"z": 0.5
+							},
+							{
+								"x": 22.63,
+								"y": 14.24,
+								"z": 0.5
+							},
+							{
+								"x": 23.93,
+								"y": 11.97,
+								"z": 0.5
+							},
+							{
+								"x": 25.75,
+								"y": 9.15,
+								"z": 0.5
+							},
+							{
+								"x": 26.72,
+								"y": 5.5,
+								"z": 0.5
+							},
+							{
+								"x": 28.69,
+								"y": -0.14,
+								"z": 0.5
+							},
+							{
+								"x": 29.11,
+								"y": -2.4,
+								"z": 0.5
+							},
+							{
+								"x": 30.41,
+								"y": -4.68,
+								"z": 0.5
+							},
+							{
+								"x": 31.76,
+								"y": -7.5,
+								"z": 0.5
+							},
+							{
+								"x": 33.51,
+								"y": -10.05,
+								"z": 0.5
+							},
+							{
+								"x": 35.2,
+								"y": -12.05,
+								"z": 0.5
+							},
+							{
+								"x": 37.59,
+								"y": -14.94,
+								"z": 0.5
+							},
+							{
+								"x": 40.43,
+								"y": -17.84,
+								"z": 0.5
+							},
+							{
+								"x": 42.51,
+								"y": -19.84,
+								"z": 0.5
+							},
+							{
+								"x": 43.67,
+								"y": -20.75,
+								"z": 0.5
+							},
+							{
+								"x": 44.34,
+								"y": -21.33,
+								"z": 0.5
+							},
+							{
+								"x": 44.54,
+								"y": -21.42,
+								"z": 0.5
+							}
+						]
+					},
+					{
+						"type": "straight",
+						"points": [
+							{
+								"x": 44.54,
+								"y": -21.42,
+								"z": 1
+							},
+							{
+								"x": 428.08,
+								"y": -21.42,
+								"z": 1
+							}
+						]
+					}
+				],
+				"color": "blue",
+				"fill": "none",
+				"dash": "draw",
+				"size": "s",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a21o2",
+			"typeName": "shape"
+		},
+		{
+			"x": 91.72237032350023,
+			"y": 3.477707469239249,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:30_V1tpb3VTXYR9jiEBG9",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 229.22265625,
+				"text": "(intersection   - player )",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7987034919045006
+			},
+			"parentId": "shape:N0GMmJSEUyHRJyjB4JRTf",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 190.34350758611833,
+			"y": 9.400368806028382,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Mq_mrn1Tz8h0XueUsONk4",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "x",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5566526748241174
+			},
+			"parentId": "shape:N0GMmJSEUyHRJyjB4JRTf",
+			"index": "a248I",
+			"typeName": "shape"
+		},
+		{
+			"x": 274.45699345180725,
+			"y": -3.6409616477249074,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:FRWlMBDHhW6k7vvktsPT2",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "2",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5564379911584377
+			},
+			"parentId": "shape:N0GMmJSEUyHRJyjB4JRTf",
+			"index": "a40lT",
+			"typeName": "shape"
+		},
+		{
+			"x": 260.8358181076453,
+			"y": 9.311986882760266,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:gdkdLxh9f8IXSc0QmiGBZ",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "x",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5566526748241174
+			},
+			"parentId": "shape:N0GMmJSEUyHRJyjB4JRTf",
+			"index": "a3646",
+			"typeName": "shape"
+		},
+		{
+			"x": 106.14716663246145,
+			"y": 26.731108169562958,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:N0GMmJSEUyHRJyjB4JRTf",
+			"type": "group",
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a380Z",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 274.4569934518072,
+			"y": -3.6409616477249074,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fnnaFHw92nB_kPKcF-Mmf",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "2",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5564379911584377
+			},
+			"parentId": "shape:JpUrLMwDAyp_GwUw8YQaB",
+			"index": "a51tU",
+			"typeName": "shape"
+		},
+		{
+			"x": 260.8358181076452,
+			"y": 9.311986882760266,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fVEYIHwPcnpk0dUbKqS5L",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 11.15112540192926,
+				"text": "y",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5566526748241174
+			},
+			"parentId": "shape:JpUrLMwDAyp_GwUw8YQaB",
+			"index": "a3gCX",
+			"typeName": "shape"
+		},
+		{
+			"x": 190.34350758611833,
+			"y": 9.400368806028382,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:BJM__hZKuRh_hc0QW_MvD",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 11.15112540192926,
+				"text": "y",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.5566526748241174
+			},
+			"parentId": "shape:JpUrLMwDAyp_GwUw8YQaB",
+			"index": "a2ek9",
+			"typeName": "shape"
+		},
+		{
+			"x": 91.72237032350023,
+			"y": 3.477707469239249,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:wxe8u4Z6PFR1fWLUdf3Ot",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 229.22265625,
+				"text": "(intersection   - player )",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7987034919045006
+			},
+			"parentId": "shape:JpUrLMwDAyp_GwUw8YQaB",
+			"index": "a1fAm",
+			"typeName": "shape"
+		},
+		{
+			"x": 313.78404256567626,
+			"y": 28.371706760661255,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:JpUrLMwDAyp_GwUw8YQaB",
+			"type": "group",
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a432v",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 390.95712985271564,
+			"y": 33.27156858593844,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Mg9q7ARZRRI-1ysomCl4j",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 16,
+				"text": "+",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7987034919045006
+			},
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a50JA",
+			"typeName": "shape"
+		},
+		{
+			"x": 67.5732421875,
+			"y": 6.988695566539263,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:LNKWIfir9g4sncgelNKMP",
+			"type": "geo",
+			"props": {
+				"w": 536.2336883544922,
+				"h": 55.45943748020208,
+				"geo": "rectangle",
+				"color": "red",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "dashed",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"index": "a608V",
+			"typeName": "shape"
+		},
+		{
+			"x": 112.01665844376294,
+			"y": 2326.595643326889,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:NNj_no1lsYZvLxTqmT7xZ",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 747.8424072265625,
+				"text": "This formula gives us the Euclidean distance between the player’s position and \nthe point where the ray hits the wall, which represents the actual distance \ntraveled by the ray.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6969711042101095
+			},
+			"parentId": "page:page",
+			"index": "ao1r3",
+			"typeName": "shape"
+		},
+		{
+			"x": 36.13282360489575,
+			"y": 2250.112950434681,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:HYpV1S5wWOPXOyeYi-wB5",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "an3EM",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 102.46256603653637,
+			"y": 2385.0154902197037,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:0kPzlFp4571GGdi0vEWQR",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 124.41145324707031,
+				"text": "Example in C:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "ap2nT",
+			"typeName": "shape"
+		},
+		{
+			"x": 100.97813763077465,
+			"y": 2418.5280498147636,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:D3CxdD2YDuJCQ32WqhgBW",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 988.3345413451673,
+				"text": "double distance_to_wall = sqrt(pow(intersection_x - player_x, 2) + pow(intersection_y - player_y, 2));",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.7827519872752655
+			},
+			"parentId": "page:page",
+			"index": "aq1Mp",
+			"typeName": "shape"
+		},
+		{
+			"x": 98.17170161985473,
+			"y": 2449.5243137718876,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:3w0aS53u586mwH-ePihDL",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 321.76171875,
+				"text": "3 . 2 Adjusting for Fisheye Effect :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aD319KQ8",
+			"typeName": "shape"
+		},
+		{
+			"x": 110.02566878307073,
+			"y": 2480.83487613721,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:v0EbZyBsaxjp2A6EjPi5a",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 853.4283447265625,
+				"text": "When calculating distance, there is a fisheye effect due to the player’s field of view (FOV),\n where rays at angles different from the player’s viewing direction appear farther than \nthey actually are. To correct this, we project the ray’s distance back to the player’s central\nview using cosine adjustment.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7635318277733119
+			},
+			"parentId": "page:page",
+			"index": "ar52i",
+			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:3NJ8fhOlCu5U0uqFTaQHR",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 278.9654541015625,
+				"text": "The corrected distance uses:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1
+			},
+			"parentId": "shape:SsUK8aRT-bLAr0NuSwfXP",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 16.68621826171875,
+			"y": 31.009170532226562,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-3E_PvZGzY3mDrE40tliK",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 750.5767822265625,
+				"text": "double corrected_distance = distance_to_wall * cos(ray_angle - player_angle);",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8428682369109043
+			},
+			"parentId": "shape:SsUK8aRT-bLAr0NuSwfXP",
+			"index": "a22zc",
+			"typeName": "shape"
+		},
+		{
+			"x": 111.2105747889301,
+			"y": 2566.9319067768583,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:SsUK8aRT-bLAr0NuSwfXP",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "at8mY",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 98.86506099485473,
+			"y": 2639.8465488793095,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:W4WYcmT3jfwCtDrO5eUva",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 327.6861877441406,
+				"text": "3 . 3 calculating Wall Slice Height :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aD3JUEmt",
+			"typeName": "shape"
+		},
+		{
+			"x": 107.439769405677,
+			"y": 2677.733568832985,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:SpSe6cw70PFSqiytTBpMN",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 81.50129699707031,
+				"text": "Formula:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "apYdb",
+			"typeName": "shape"
+		},
+		{
+			"x": 31.310247312614763,
+			"y": 34.55585856300149,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:5fZOwl2pqtJwGFUD2Qh9u",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 133.93618774414062,
+				"text": "wall_height =",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.866070761257358
+			},
+			"parentId": "shape:-UnuT68MnRdKFauwp89wa",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 167.6713548395188,
+			"y": 46.39111937182224,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:RCJ_CtTQ_v0KQMirWpB8g",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "straight",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 169.82,
+								"y": 0,
+								"z": 1
+							}
+						]
+					}
+				],
+				"color": "blue",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "shape:-UnuT68MnRdKFauwp89wa",
+			"index": "a2BVL",
+			"typeName": "shape"
+		},
+		{
+			"x": 159.02188013934557,
+			"y": 13.597622758355556,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4R0Dgs44opdYyIVAbN9Mm",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 221.87890625,
+				"text": "project_plane_distance",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.866070761257358
+			},
+			"parentId": "shape:-UnuT68MnRdKFauwp89wa",
+			"index": "a38BF",
+			"typeName": "shape"
+		},
+		{
+			"x": 170.46520481173167,
+			"y": 52.759731386319345,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Ve5A9V9uBx7t6epCllpyD",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 181.3450469970703,
+				"text": "corrected_distance",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.866070761257358
+			},
+			"parentId": "shape:-UnuT68MnRdKFauwp89wa",
+			"index": "a46rA",
+			"typeName": "shape"
+		},
+		{
+			"x": 25.511077880859375,
+			"y": 5.6614776411770436,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Njk-7mMYsb_chxElqmmp0",
+			"type": "geo",
+			"props": {
+				"w": 329.9413757324219,
+				"h": 73.22135624108274,
+				"geo": "rectangle",
+				"color": "red",
+				"labelColor": "black",
+				"fill": "none",
+				"dash": "dashed",
+				"size": "s",
+				"font": "draw",
+				"text": "",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"growY": 0,
+				"url": "",
+				"scale": 1
+			},
+			"parentId": "shape:-UnuT68MnRdKFauwp89wa",
+			"index": "a56LC",
+			"typeName": "shape"
+		},
+		{
+			"x": 103.24823348033635,
+			"y": 2703.399158377277,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-UnuT68MnRdKFauwp89wa",
+			"type": "group",
+			"parentId": "page:page",
+			"index": "ayBha",
+			"props": {},
+			"typeName": "shape"
+		},
+		{
+			"x": 96.25290266978948,
+			"y": 2806.679777468691,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ksjWb6Pjszy0vtr_DvohN",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 920,
+				"text": "projection_plane_distance is a constant that represents the scaling factor for the projection based on the screen dimensions and FOV",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.6134688004203465
+			},
+			"parentId": "page:page",
+			"index": "az97l",
+			"typeName": "shape"
+		},
+		{
+			"x": 95.80038802135198,
+			"y": 2814.452826336041,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Fb5i53IkTAIf3PtT-_Iqo",
+			"type": "highlight",
+			"props": {
+				"segments": [
+					{
+						"type": "straight",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 143.84,
+								"y": 0,
+								"z": 1
+							}
+						]
+					}
+				],
+				"color": "light-blue",
+				"size": "s",
+				"isComplete": true,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "b00BDo",
+			"typeName": "shape"
+		},
+		{
+			"x": 104.197581905677,
+			"y": 2847.333178207985,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GjvfFaS46b2smD_xvUZB2",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 90.53775787353516,
+				"text": "Example :",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "apskR",
+			"typeName": "shape"
+		},
+		{
+			"x": 111.53280989635198,
+			"y": 2875.442869170367,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:E4ec4cQa9j-DWJpDG7Fhe",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 905.5208129882812,
+				"text": "double projection_plane_distance = (screen_width / 2) / tan(FOV / 2);\nint wall_height = (int)(projection_plane_distance / corrected_distance);",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.7182385772990421
+			},
+			"parentId": "page:page",
+			"index": "b012GG",
+			"typeName": "shape"
+		},
+		{
+			"x": 53.297137899281665,
+			"y": 2944.7830828952237,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:McGU41qw00KYoMtow_kpS",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "s",
+				"w": 175.04296875,
+				"text": "Full Code Example:",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "b02BnZ",
+			"typeName": "shape"
+		},
+		{
+			"x": 82.3531529139301,
+			"y": 2976.6256405289514,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:sjryU_SzCTYGOKacMzmvm",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 956.25,
+				"text": "double calculate_wall_height(double player_x, double player_y, double intersection_x, double intersection_y, double ray_angle, double player_angle, double screen_width, double FOV) {\n    // Step 1: Calculate raw distance to wall\n    double distance_to_wall = sqrt(pow(intersection_x - player_x, 2) + pow(intersection_y - player_y, 2));\n\n    // Step 2: Correct for fisheye effect\n    double corrected_distance = distance_to_wall * cos(ray_angle - player_angle);\n\n    // Step 3: Calculate wall height\n    double projection_plane_distance = (screen_width / 2) / tan(FOV / 2);\n    int wall_height = (int)(projection_plane_distance / corrected_distance);\n\n    return wall_height;\n}",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.7065916398713826
+			},
+			"parentId": "page:page",
+			"index": "b037kR",
+			"typeName": "shape"
+		},
+		{
+			"x": 71.21705977428167,
+			"y": 3323.154701823278,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:15FhOWG92wa2x1NKMev2W",
+			"type": "draw",
+			"props": {
+				"segments": [
+					{
+						"type": "free",
+						"points": [
+							{
+								"x": 0,
+								"y": 0,
+								"z": 0.5
+							},
+							{
+								"x": 0.08,
+								"y": -0.28,
+								"z": 0.5
+							},
+							{
+								"x": -0.41,
+								"y": -2.12,
+								"z": 0.5
+							},
+							{
+								"x": -1.54,
+								"y": -5.46,
+								"z": 0.5
+							},
+							{
+								"x": -2.81,
+								"y": -10.06,
+								"z": 0.5
+							},
+							{
+								"x": -4.71,
+								"y": -17.19,
+								"z": 0.5
+							},
+							{
+								"x": -7.18,
+								"y": -25.59,
+								"z": 0.5
+							},
+							{
+								"x": -9.76,
+								"y": -35.9,
+								"z": 0.5
+							},
+							{
+								"x": -12.9,
+								"y": -46.85,
+								"z": 0.5
+							},
+							{
+								"x": -16.65,
+								"y": -60.34,
+								"z": 0.5
+							},
+							{
+								"x": -20.35,
+								"y": -71.93,
+								"z": 0.5
+							},
+							{
+								"x": -23.56,
+								"y": -84.78,
+								"z": 0.5
+							},
+							{
+								"x": -27.88,
+								"y": -98.27,
+								"z": 0.5
+							},
+							{
+								"x": -31.66,
+								"y": -111.77,
+								"z": 0.5
+							},
+							{
+								"x": -37.03,
+								"y": -131.05,
+								"z": 0.5
+							},
+							{
+								"x": -40.72,
+								"y": -142.63,
+								"z": 0.5
+							},
+							{
+								"x": -43.92,
+								"y": -154.85,
+								"z": 0.5
+							},
+							{
+								"x": -47.17,
+								"y": -168.35,
+								"z": 0.5
+							},
+							{
+								"x": -51.52,
+								"y": -182.47,
+								"z": 0.5
+							},
+							{
+								"x": -52.6,
+								"y": -195.97,
+								"z": 0.5
+							},
+							{
+								"x": -54.76,
+								"y": -208.82,
+								"z": 0.5
+							},
+							{
+								"x": -56.91,
+								"y": -222.31,
+								"z": 0.5
+							},
+							{
+								"x": -58.51,
+								"y": -235.17,
+								"z": 0.5
+							},
+							{
+								"x": -60.12,
+								"y": -248.66,
+								"z": 0.5
+							},
+							{
+								"x": -62.23,
+								"y": -260.24,
+								"z": 0.5
+							},
+							{
+								"x": -63.33,
+								"y": -275.01,
+								"z": 0.5
+							},
+							{
+								"x": -64.96,
+								"y": -294.29,
+								"z": 0.5
+							},
+							{
+								"x": -64.96,
+								"y": -307.15,
+								"z": 0.5
+							},
+							{
+								"x": -65.48,
+								"y": -318.09,
+								"z": 0.5
+							},
+							{
+								"x": -65.48,
+								"y": -329.68,
+								"z": 0.5
+							},
+							{
+								"x": -66.01,
+								"y": -341.26,
+								"z": 0.5
+							},
+							{
+								"x": -67.56,
+								"y": -351.57,
+								"z": 0.5
+							},
+							{
+								"x": -68.61,
+								"y": -361.88,
+								"z": 0.5
+							},
+							{
+								"x": -69.7,
+								"y": -372.19,
+								"z": 0.5
+							},
+							{
+								"x": -71.27,
+								"y": -383.14,
+								"z": 0.5
+							},
+							{
+								"x": -71.27,
+								"y": -394.09,
+								"z": 0.5
+							},
+							{
+								"x": -73.96,
+								"y": -413.38,
+								"z": 0.5
+							},
+							{
+								"x": -74.5,
+								"y": -426.87,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -439.09,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -451.31,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -466.07,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -482.11,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -494.96,
+								"z": 0.5
+							},
+							{
+								"x": -76.1,
+								"y": -505.91,
+								"z": 0.5
+							},
+							{
+								"x": -74.55,
+								"y": -516.22,
+								"z": 0.5
+							},
+							{
+								"x": -73,
+								"y": -527.17,
+								"z": 0.5
+							},
+							{
+								"x": -71.41,
+								"y": -540.02,
+								"z": 0.5
+							},
+							{
+								"x": -68.63,
+								"y": -556.7,
+								"z": 0.5
+							},
+							{
+								"x": -64.74,
+								"y": -582.34,
+								"z": 0.5
+							},
+							{
+								"x": -63.64,
+								"y": -590.04,
+								"z": 0.5
+							},
+							{
+								"x": -58.76,
+								"y": -611.23,
+								"z": 0.5
+							},
+							{
+								"x": -54.94,
+								"y": -625.99,
+								"z": 0.5
+							},
+							{
+								"x": -50.57,
+								"y": -640.76,
+								"z": 0.5
+							},
+							{
+								"x": -45.11,
+								"y": -655.52,
+								"z": 0.5
+							},
+							{
+								"x": -41.31,
+								"y": -669.65,
+								"z": 0.5
+							},
+							{
+								"x": -35.75,
+								"y": -685.76,
+								"z": 0.5
+							},
+							{
+								"x": -29.28,
+								"y": -698.17,
+								"z": 0.5
+							},
+							{
+								"x": -25.43,
+								"y": -713.56,
+								"z": 0.5
+							},
+							{
+								"x": -20.51,
+								"y": -728.33,
+								"z": 0.5
+							},
+							{
+								"x": -17.3,
+								"y": -741.18,
+								"z": 0.5
+							},
+							{
+								"x": -14.09,
+								"y": -754.04,
+								"z": 0.5
+							},
+							{
+								"x": -10.53,
+								"y": -763.72,
+								"z": 0.5
+							},
+							{
+								"x": -7.64,
+								"y": -774.73,
+								"z": 0.5
+							},
+							{
+								"x": -5.58,
+								"y": -779.33,
+								"z": 0.5
+							},
+							{
+								"x": -3.88,
+								"y": -783.92,
+								"z": 0.5
+							},
+							{
+								"x": -3.3,
+								"y": -786.01,
+								"z": 0.5
+							},
+							{
+								"x": -2.48,
+								"y": -788.1,
+								"z": 0.5
+							},
+							{
+								"x": -2.24,
+								"y": -789.21,
+								"z": 0.5
+							},
+							{
+								"x": -2.05,
+								"y": -789.59,
+								"z": 0.5
+							},
+							{
+								"x": -1.81,
+								"y": -790.51,
+								"z": 0.5
+							},
+							{
+								"x": -1.43,
+								"y": -790.71,
+								"z": 0.5
+							},
+							{
+								"x": -1.24,
+								"y": -790.9,
+								"z": 0.5
+							},
+							{
+								"x": -0.87,
+								"y": -791.09,
+								"z": 0.5
+							},
+							{
+								"x": -0.3,
+								"y": -791.47,
+								"z": 0.5
+							},
+							{
+								"x": 0.08,
+								"y": -791.86,
+								"z": 0.5
+							},
+							{
+								"x": 0.65,
+								"y": -792.05,
+								"z": 0.5
+							},
+							{
+								"x": 1.03,
+								"y": -792.43,
+								"z": 0.5
+							},
+							{
+								"x": 1.41,
+								"y": -792.82,
+								"z": 0.5
+							},
+							{
+								"x": 1.6,
+								"y": -793.2,
+								"z": 0.5
+							},
+							{
+								"x": 1.79,
+								"y": -793.4,
+								"z": 0.5
+							},
+							{
+								"x": 2.36,
+								"y": -793.59,
+								"z": 0.5
+							},
+							{
+								"x": 2.55,
+								"y": -793.78,
+								"z": 0.5
+							},
+							{
+								"x": 2.92,
+								"y": -793.97,
+								"z": 0.5
+							},
+							{
+								"x": 3.3,
+								"y": -794.16,
+								"z": 0.5
+							},
+							{
+								"x": 3.68,
+								"y": -794.55,
+								"z": 0.5
+							},
+							{
+								"x": 4.63,
+								"y": -794.93,
+								"z": 0.5
+							},
+							{
+								"x": 5.55,
+								"y": -795.37,
+								"z": 0.5
+							},
+							{
+								"x": 6.12,
+								"y": -795.75,
+								"z": 0.5
+							},
+							{
+								"x": 6.88,
+								"y": -796.14,
+								"z": 0.5
+							},
+							{
+								"x": 7.26,
+								"y": -796.52,
+								"z": 0.5
+							},
+							{
+								"x": 7.64,
+								"y": -796.71,
+								"z": 0.5
+							},
+							{
+								"x": 7.83,
+								"y": -796.9,
+								"z": 0.5
+							},
+							{
+								"x": 8.58,
+								"y": -797.29,
+								"z": 0.5
+							},
+							{
+								"x": 8.96,
+								"y": -797.67,
+								"z": 0.5
+							},
+							{
+								"x": 9.53,
+								"y": -798.06,
+								"z": 0.5
+							},
+							{
+								"x": 10.1,
+								"y": -798.63,
+								"z": 0.5
+							},
+							{
+								"x": 10.67,
+								"y": -799.02,
+								"z": 0.5
+							},
+							{
+								"x": 11.24,
+								"y": -799.59,
+								"z": 0.5
+							},
+							{
+								"x": 11.62,
+								"y": -799.98,
+								"z": 0.5
+							},
+							{
+								"x": 12.63,
+								"y": -801,
+								"z": 0.5
+							},
+							{
+								"x": 13.4,
+								"y": -801.76,
+								"z": 0.5
+							},
+							{
+								"x": 13.77,
+								"y": -802.15,
+								"z": 0.5
+							},
+							{
+								"x": 13.96,
+								"y": -802.53,
+								"z": 0.5
+							},
+							{
+								"x": 14.53,
+								"y": -803.11,
+								"z": 0.5
+							},
+							{
+								"x": 14.72,
+								"y": -803.3,
+								"z": 0.5
+							},
+							{
+								"x": 14.91,
+								"y": -803.49,
+								"z": 0.5
+							},
+							{
+								"x": 15.1,
+								"y": -803.68,
+								"z": 0.5
+							},
+							{
+								"x": 15.29,
+								"y": -803.88,
+								"z": 0.5
+							},
+							{
+								"x": 15.86,
+								"y": -804.45,
+								"z": 0.5
+							},
+							{
+								"x": 16.43,
+								"y": -804.84,
+								"z": 0.5
+							},
+							{
+								"x": 17.1,
+								"y": -805.95,
+								"z": 0.5
+							},
+							{
+								"x": 17.97,
+								"y": -807.06,
+								"z": 0.5
+							},
+							{
+								"x": 18.93,
+								"y": -808.28,
+								"z": 0.5
+							},
+							{
+								"x": 19.31,
+								"y": -808.86,
+								"z": 0.5
+							},
+							{
+								"x": 19.69,
+								"y": -809.24,
+								"z": 0.5
+							},
+							{
+								"x": 19.88,
+								"y": -809.43,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -809.63,
+								"z": 0.5
+							},
+							{
+								"x": 20.45,
+								"y": -810.01,
+								"z": 0.5
+							},
+							{
+								"x": 20.63,
+								"y": -810.2,
+								"z": 0.5
+							},
+							{
+								"x": 20.82,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 20.63,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 20.44,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 20.25,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 20.06,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 19.67,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 19.48,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 19.29,
+								"y": -810.39,
+								"z": 0.5
+							},
+							{
+								"x": 19.1,
+								"y": -810.21,
+								"z": 0.5
+							},
+							{
+								"x": 18.52,
+								"y": -809.82,
+								"z": 0.5
+							},
+							{
+								"x": 18.33,
+								"y": -809.82,
+								"z": 0.5
+							},
+							{
+								"x": 17.75,
+								"y": -809.64,
+								"z": 0.5
+							},
+							{
+								"x": 17.56,
+								"y": -809.64,
+								"z": 0.5
+							},
+							{
+								"x": 17.37,
+								"y": -809.64,
+								"z": 0.5
+							},
+							{
+								"x": 17.17,
+								"y": -809.45,
+								"z": 0.5
+							},
+							{
+								"x": 16.79,
+								"y": -809.45,
+								"z": 0.5
+							},
+							{
+								"x": 16.41,
+								"y": -809.45,
+								"z": 0.5
+							},
+							{
+								"x": 16.02,
+								"y": -809.26,
+								"z": 0.5
+							},
+							{
+								"x": 15.64,
+								"y": -809.26,
+								"z": 0.5
+							},
+							{
+								"x": 14.72,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 14.33,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 13.41,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 13.03,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 12.45,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 11.68,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 11.11,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 10.34,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 9.76,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 9.19,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 8.07,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 7.15,
+								"y": -808.77,
+								"z": 0.5
+							},
+							{
+								"x": 6.04,
+								"y": -808.53,
+								"z": 0.5
+							},
+							{
+								"x": 3.85,
+								"y": -808.29,
+								"z": 0.5
+							},
+							{
+								"x": 2.74,
+								"y": -808.1,
+								"z": 0.5
+							},
+							{
+								"x": 2.55,
+								"y": -808.1,
+								"z": 0.5
+							},
+							{
+								"x": 5.98,
+								"y": -809.37,
+								"z": 0.5
+							},
+							{
+								"x": 9.32,
+								"y": -810.11,
+								"z": 0.5
+							},
+							{
+								"x": 10.04,
+								"y": -810.11,
+								"z": 0.5
+							},
+							{
+								"x": 13.13,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 14.24,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 15.35,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 16.26,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 17.37,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 18.47,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 19.24,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 19.61,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 20.18,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -810.9,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -810.71,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -810.52,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -810.14,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -809.77,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -809.01,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -808.63,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -808.25,
+								"z": 0.5
+							},
+							{
+								"x": 21.13,
+								"y": -807.87,
+								"z": 0.5
+							},
+							{
+								"x": 20.94,
+								"y": -807.3,
+								"z": 0.5
+							},
+							{
+								"x": 20.94,
+								"y": -807.11,
+								"z": 0.5
+							},
+							{
+								"x": 20.94,
+								"y": -806.74,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -806.17,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -805.79,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -805.41,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -805.03,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -804.46,
+								"z": 0.5
+							},
+							{
+								"x": 20.75,
+								"y": -804.08,
+								"z": 0.5
+							},
+							{
+								"x": 20.56,
+								"y": -803.32,
+								"z": 0.5
+							},
+							{
+								"x": 20.56,
+								"y": -802.94,
+								"z": 0.5
+							},
+							{
+								"x": 20.56,
+								"y": -802.18,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -801.27,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -800.35,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -799.78,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -798.87,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -797.95,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -797.19,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -796.62,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -795.71,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -795.14,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -794.19,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -793.81,
+								"z": 0.5
+							},
+							{
+								"x": 20.07,
+								"y": -793.24,
+								"z": 0.5
+							},
+							{
+								"x": 19.88,
+								"y": -793.05,
+								"z": 0.5
+							},
+							{
+								"x": 19.88,
+								"y": -792.67,
+								"z": 0.5
+							}
+						]
+					}
+				],
+				"color": "green",
+				"fill": "none",
+				"dash": "solid",
+				"size": "s",
+				"isComplete": true,
+				"isClosed": false,
+				"isPen": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "b04BrI",
+			"typeName": "shape"
+		}
+	]
+}

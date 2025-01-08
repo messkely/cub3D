@@ -1,0 +1,18 @@
+NO wall_textures/wall_north.png
+WE wall_textures/wall_west.png
+SO wall_textures/wall_south.png
+EA wall_textures/wall_east.png
+C 125, 109, 255
+F 34, 192, 0212
+
+ 111111111
+10000000001
+10000000001
+10000000001
+10000000001
+10000N00001
+10000000001
+10000000001
+10000000001
+10000000001
+ 111111111

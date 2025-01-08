@@ -1,5 +1,4 @@
 % cub3D questions ?
 	x why we divided the FOV into individual rays ?
 		! for not to come out of FOV of player
-	x 
-	x how can ray hits the wall
+	x how can ray hits the wall ?
